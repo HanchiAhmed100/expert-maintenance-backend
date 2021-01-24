@@ -64,7 +64,7 @@ export default {
   async created(){
     this.loading = true
     this.id = this.$route.params.id
-    await axios.get(`http://localhost:8081/api/intervention/employes/${this.id}`)
+    await axios.get(`https://maintenance-expert.herokuapp.com/api/intervention/employes/${this.id}`)
     .then(res =>{
         console.log(res.data)
         this.interventions = res.data

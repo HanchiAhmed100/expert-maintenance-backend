@@ -54,7 +54,7 @@ export default {
   },
   methods :{
     send : function(){
-      axios.post("http://localhost:8081/api/client",{
+      axios.post("https://maintenance-expert.herokuapp.com/api/client",{
         nom : this.nom,
         adresse : this.adresse,
         tel : this.tel,

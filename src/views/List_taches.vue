@@ -49,7 +49,7 @@ export default {
   },
   mounted(){
     this.loading = true
-    axios.get("http://localhost:8081/api/tache")
+    axios.get("https://maintenance-expert.herokuapp.com/api/tache")
     .then(res =>{
         console.log(res.data)
       this.taches = res.data

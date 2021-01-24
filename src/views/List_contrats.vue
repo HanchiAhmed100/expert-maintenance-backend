@@ -47,7 +47,7 @@ export default {
   },
   mounted(){
     this.loading = true
-    axios.get("http://localhost:8081/api/contrat")
+    axios.get("https://maintenance-expert.herokuapp.com/api/contrat")
     .then(res =>{
         console.log(res.data)
       this.contrats = res.data

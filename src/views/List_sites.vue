@@ -3,7 +3,7 @@
     <div uk-alert>
         <fieldset class="uk-fieldset">
 
-            <legend class="uk-legend">Liste des contrats</legend>
+            <legend class="uk-legend">Liste des sites</legend>
             <div class="uk-overflow-auto">
                 <table class="uk-table uk-table-justify uk-table-divider">
                     <thead>
@@ -53,12 +53,10 @@ export default {
   },
   mounted(){
     this.loading = true
-    axios.get("http://localhost:8081/api/site")
+    axios.get("https://maintenance-expert.herokuapp.com/api/site")
     .then(res =>{
         console.log(res.data)
         this.sites = res.data
-        this.$router.push('Listinterventions')
-
     })
     .catch(err => {
         this.msg = err

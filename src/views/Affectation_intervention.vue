@@ -49,14 +49,14 @@ export default {
   },
   mounted(){
     this.loading = true
-    axios.get("http://localhost:8081/api/employe")
+    axios.get("https://maintenance-expert.herokuapp.com/api/employe")
     .then(res =>{
       this.employes = res.data
     })
     .catch(err => {
         this.msg = err
     })
-    axios.get("http://localhost:8081/api/intervention")
+    axios.get("https://maintenance-expert.herokuapp.com/api/intervention")
     .then(res =>{
       this.interventions = res.data
     })
@@ -67,7 +67,7 @@ export default {
   },
   methods :{
     send : function(){
-        axios.post("http://localhost:8081/api/employe/interventions",{
+        axios.post("https://maintenance-expert.herokuapp.com/api/employe/interventions",{
             intervention_id : this.intervention_id,
             employe_id : this.employe_id,
         })

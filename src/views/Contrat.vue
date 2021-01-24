@@ -70,9 +70,8 @@ export default {
   },
   mounted(){
     this.loading = true
-    axios.get("http://localhost:8081/api/client")
+    axios.get("https://maintenance-expert.herokuapp.com/api/client")
     .then(res =>{
-      this.$router.push('listcontrats')
       this.clients = res.data
     })
     .catch(err => {
@@ -83,7 +82,7 @@ export default {
   methods :{
     send : function(){
       this.loading = true
-      axios.post("http://localhost:8081/api/contrat",{
+      axios.post("https://maintenance-expert.herokuapp.com/api/contrat",{
         datedebut : this.datedebut,
         datefin : this.datefin,
         redevence : this.redevence,
@@ -91,6 +90,7 @@ export default {
       })
       .then(res => {
         console.log(res)
+        this.$router.push('listcontrats')
         this.msg = "Contrat ajouter"
       }).catch(err => {
         this.msg = err

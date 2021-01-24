@@ -72,7 +72,7 @@ export default {
   },
   mounted(){
     this.loading = true
-    axios.get("http://localhost:8081/api/client")
+    axios.get("https://maintenance-expert.herokuapp.com/api/client")
     .then(res =>{
       this.clients = res.data
     })
@@ -83,7 +83,7 @@ export default {
   },
   methods :{
     send : function(){
-      axios.post("http://localhost:8081/api/site",{
+      axios.post("https://maintenance-expert.herokuapp.com/api/site",{
         longitude : this.longitude,
         latitude : this.latitude,
         adresse : this.adresse,

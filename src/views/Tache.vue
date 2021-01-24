@@ -68,7 +68,7 @@ export default {
   },
   mounted(){
     this.loading = true
-    axios.get("http://localhost:8081/api/intervention")
+    axios.get("https://maintenance-expert.herokuapp.com/api/intervention")
     .then(res =>{
       this.interventions = res.data
     })
@@ -80,7 +80,7 @@ export default {
   methods :{
     send : function(){
       this.loading = true
-      axios.post("http://localhost:8081/api/tache",{
+      axios.post("https://maintenance-expert.herokuapp.com/api/tache",{
         refernce : this.refernce,
         nom : this.nom,
         duree : this.duree,
