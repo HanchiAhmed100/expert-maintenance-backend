@@ -72,6 +72,7 @@ export default {
     this.loading = true
     axios.get("http://localhost:8081/api/client")
     .then(res =>{
+      this.$router.push('listcontrats')
       this.clients = res.data
     })
     .catch(err => {

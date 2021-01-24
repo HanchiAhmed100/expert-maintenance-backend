@@ -73,6 +73,7 @@ export default {
         })
         .then(res => {
             console.log(res)
+            this.$router.push('Listinterventions')
             this.msg = "Affection avec sucess"
         }).catch(err => {
             console.log(err)

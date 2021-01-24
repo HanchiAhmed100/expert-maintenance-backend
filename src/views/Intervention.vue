@@ -117,6 +117,8 @@ export default {
       .then(res => {
         console.log(res)
         this.msg = "Intervention ajouter"
+        this.$router.push('Listinterventions')
+
       }).catch(err => {
         this.msg = err
       })

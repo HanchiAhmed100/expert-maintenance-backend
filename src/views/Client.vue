@@ -66,6 +66,8 @@ export default {
       .then(res => {
         console.log(res)
         this.msg = "Contact ajouter"
+        this.$router.push('listclients')
+
       }).catch(err => {
         this.msg = err
       })

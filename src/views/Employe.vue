@@ -71,6 +71,8 @@ export default {
       .then(res => {
         console.log(res)
         this.msg = "Employe ajouter"
+        this.$router.push('listemployes') 
+
       }).catch(err => {
         this.msg = err
       })

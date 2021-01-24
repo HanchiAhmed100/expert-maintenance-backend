@@ -90,6 +90,7 @@ export default {
       })
       .then(res => {
         console.log(res)
+        this.$router.push('listtaches') 
         this.msg = "Ajouter Tache"
       }).catch(err => {
         this.msg = err

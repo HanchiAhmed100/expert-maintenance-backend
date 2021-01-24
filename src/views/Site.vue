@@ -97,6 +97,7 @@ export default {
       })
       .then(res => {
         console.log(res)
+        this.$router.push('listsites') 
         this.msg = "Site ajouter"
       }).catch(err => {
         this.msg = err

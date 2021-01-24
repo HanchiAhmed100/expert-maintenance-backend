@@ -56,7 +56,9 @@ export default {
     axios.get("http://localhost:8081/api/site")
     .then(res =>{
         console.log(res.data)
-      this.sites = res.data
+        this.sites = res.data
+        this.$router.push('Listinterventions')
+
     })
     .catch(err => {
         this.msg = err
